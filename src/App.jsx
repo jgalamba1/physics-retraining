@@ -625,14 +625,12 @@ function searchCurriculum(query) {
     for (const section of phase.sections) {
       // Search resources
       for (const resource of section.resources) {
-        const fields = [
+        const fields = normalizeSearch([
           resource.title, resource.author, resource.why, resource.type,
           resource.insecure && resource.insecure.advice,
           resource.insecure && resource.insecure.alt,
           resource.insecure && resource.insecure.altWhy,
-        ].filter(Boolean).join(" ");
-        const rawFields = [resource.title, resource.author, resource.why, resource.type, resource.insecure && resource.insecure.advice, resource.insecure && resource.insecure.alt, resource.insecure && resource.insecure.altWhy].filter(Boolean).join(" ");
-        const fields = normalizeSearch(rawFields);
+        ].filter(Boolean).join(" "));
 
         if (fields.includes(q)) {
           let snippet = resource.why;
