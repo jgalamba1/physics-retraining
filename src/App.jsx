@@ -89,8 +89,8 @@ const PHYSICS = {
               insecure: { advice: "If Goldstein's Chapter 8 (canonical transformations) is opaque, read L&L §45 first — Landau motivates it physically before presenting the formalism.", alt: "Classical Mechanics — Taylor", altWhy: "Rigetti's recommendation: more accessible, excellent problems. Good on-ramp before Goldstein.", reentry: "Return to Goldstein Ch. 8 after working L&L problems §§43–48." } },
             { id: "r14", type: "COMPLEMENT", title: "Mechanics", author: "Landau & Lifshitz Vol. 1", why: "Terse but brilliant. Every sentence earns its place. Read alongside Goldstein for perspective.",
               insecure: { advice: "L&L's terseness is intentional — every problem is derivable from the text but requires work. If §2 (principle of least action) is unclear, re-read it after working the first problem set.", alt: null, altWhy: null, reentry: "Work L&L §1–3 problems before reading §4." } },
-            { id: "r15", type: "MATH DEPTH*", title: "Mathematical Methods of Classical Mechanics", author: "Arnold", why: "Optional but spectacular — symplectic manifolds as the natural home of Hamiltonian mechanics.",
-              insecure: { advice: "Arnold requires comfort with differential geometry. If inaccessible, skip to Phase 4 and return to Arnold during or after Phase 6.", alt: null, altWhy: null, reentry: "Read Arnold Ch. 1 after Spivak Calculus on Manifolds." } }
+            { id: "r15", type: "MATH DEPTH*", title: "Mathematical Methods of Classical Mechanics", author: "Arnold", why: "Optional but spectacular — symplectic manifolds as the natural home of Hamiltonian mechanics. Ch. 1–3 are the directly physics-relevant sections; the rest belongs to the post-physics pure math program.",
+              insecure: { advice: "Concurrent chapters for Phase 5–6 (requires T4 first): Ch. 1 (Lagrangian mechanics on manifolds) and Ch. 3 (Hamiltonian formalism, symplectic structure, and Poisson brackets). Prerequisite: Spivak Calculus on Manifolds Ch. 1–3. The remaining chapters (Ch. 4–10: generating functions, integrable systems, perturbation theory, adiabatic invariants) are deep symplectic geometry with limited incremental physics payoff at this level — defer to the Post-Physics Mathematics program. See Post-Physics appendix.", alt: null, altWhy: null, reentry: "Read Arnold Ch. 1 after completing T4. Ch. 3 becomes most useful after Phase 4 when the Poisson bracket → commutator correspondence is clear." } }
           ],
           spotlights: [{ type: "KEY CONNECTIONS", items: ["Poisson brackets → commutators: the correspondence principle is not mysterious once you see it algebraically", "Noether's theorem with proof: every conservation law requires a continuous symmetry", "Phase space and Liouville's theorem: incompressibility of classical probability density — classical precursor to unitarity in QM", "Action-angle variables: bridge to Bohr–Sommerfeld quantization and topological insulators"] }]
         }
@@ -360,7 +360,7 @@ const MATH = {
       id: "m0", number: "T0", title: "Proof Mechanics & Mathematical Logic",
       duration: "2–3 months", tag: "Entry", color: "#3D3B8E", light: "#EEEDF8",
       intro: "Makes the implicit learning of proof technique explicit. The fastest tier — budget 2–3 months. The five proof strategies must be internalized before anything else; they reappear in every subsequent tier.",
-      concurrent: ["p0"], concurrentNote: "Run concurrently with Physics Phase 0. The set-theoretic language here directly supports Axler's abstract vector spaces and Jaynes' probability notation.",
+      concurrent: ["p0"], concurrentNote: "CONCURRENT MINIMUM: All of T0.1 (Velleman/Hammack proof mechanics — 2–3 months, run fully concurrent with P0) and T0.3 (Hardy & Wright or Niven Ch. 1–2 only — divisibility, primes, FTA as proof practice). DEFER TO POST-PHYSICS: Number theory beyond Ch. 2 (analytic number theory, prime number theorem, algebraic number theory, Dirichlet L-functions). See Post-Physics Mathematics appendix.",
       sections: [
         {
           id: "m0_s1", title: "T0.1  Logic and Proof Strategy",
@@ -375,7 +375,7 @@ const MATH = {
         },
         {
           id: "m0_s3", title: "T0.3  Number Theory as Proof Practice",
-          desc: "The best low-stakes proof practice ground. Two options with different strengths and depth.",
+          desc: "The best low-stakes proof practice ground for T0 concurrent use: Hardy & Wright or Niven Ch. 1–2 only. These two chapters provide rich proof practice (divisibility, primes, FTA) with zero physics prerequisite. Advanced number theory beyond Ch. 2 — analytic number theory, prime number theorem, algebraic number theory, Dirichlet L-functions — is a post-physics pure math topic. See the Post-Physics Mathematics appendix.",
           resources: [
             { id: "m_r4", type: "OPTION A", title: "An Introduction to the Theory of Numbers", author: "Niven, Zuckerman & Montgomery (Ch. 1–2)", why: "Modern, efficient. Chapters 1–2 cover divisibility and primes with clean proofs. Good for rapid proof practice.",
               insecure: { advice: "If the unique factorization proof (FTA) is unclear, re-read the proof that every integer > 1 has a prime factor first (simpler induction). The FTA proof is two separate inductions — existence and uniqueness — applied in sequence.", alt: "An Introduction to the Theory of Numbers — Hardy & Wright (6th ed.)", altWhy: "Tomforde's stronger recommendation. Richer, more classical, historically deep.", reentry: "Work Niven Ch. 1 problems 1–15 before Ch. 2." } },
@@ -390,7 +390,7 @@ const MATH = {
       id: "m1", number: "T1", title: "The Bridge: Spivak's Calculus",
       duration: "6–9 months", tag: "Core", color: "#1B5E20", light: "#EDF7EE",
       intro: "Rebuilds calculus you already know operationally, from precise definitions, with full proofs. The experience is deliberately disorienting: you know how to compute limits and derivatives, but you discover you do not know what they are. This disorientation is productive.",
-      concurrent: ["p0", "p1"], concurrentNote: "Run alongside Physics Phases 0 and 1. The ε–δ language here directly supports Axler's abstract vector spaces; the completeness of ℝ motivates why function spaces in QM must be complete (Hilbert spaces).",
+      concurrent: ["p0", "p1"], concurrentNote: "Run alongside Physics Phases 0 and 1. Directly concurrent chapters: Ch. 1–8 (ε–δ limits, continuity, three hard theorems, completeness — these directly support the abstract vector space language of Axler and the completeness requirement for Hilbert spaces in QM) and Ch. 13–15 (Riemann integral, Fundamental Theorem — prerequisite for Lebesgue theory). Ch. 22–23 (infinite series, power series) are useful for QM perturbation theory but can be read concurrently with Phase 4 rather than Phase 0. The later analysis chapters (Ch. 24–30) are genuinely advanced and can be deferred to the post-physics pure math program without any physics cost.",
       sections: [
         {
           id: "m1_s1", title: "T1.1  Spivak's Calculus — Chapter Guide",
@@ -418,7 +418,7 @@ const MATH = {
       id: "m2", number: "T2", title: "Real Analysis",
       duration: "6–9 months", tag: "Core", color: "#8B1A1A", light: "#FAF0F0",
       intro: "Spivak lives on the real line. Real analysis moves to metric spaces — the abstraction of distance that unifies analysis on ℝ, ℝⁿ, and function spaces (where quantum mechanics lives). Completing this tier means functional analysis for QM is within reach.",
-      concurrent: ["p2", "p3"], concurrentNote: "Run alongside Physics Phases 2–3. Metric spaces here directly support the function space language in Phase 4 (QM). Uniform convergence explains why Fourier series proofs work.",
+      concurrent: ["p2", "p3"], concurrentNote: "CONCURRENT MINIMUM with P2–3: Abbott (full) + Rudin Ch. 1–7 (metric spaces, convergence, continuity, integration) + S&S Vol. 1 (Fourier — directly supports E&M and QM) + S&S Vol. 2 (Complex — contour integration is required physics technique). DEFER TO P4 CONCURRENT: S&S Vol. 3 (Lebesgue measure and Hilbert spaces — needed before T3 functional analysis but not before Phase 4). DEFER TO POST-PHYSICS: S&S Vol. 4 (Functional Analysis, Sobolev spaces, distributions) unless heading toward rigorous QFT. See Post-Physics Mathematics appendix.",
       sections: [
         {
           id: "m2_s0", title: "T2.0  Alternative Integrated Spine: Stein & Shakarchi",
@@ -430,7 +430,7 @@ const MATH = {
               insecure: { advice: "S&S Vol. 2 is more demanding than Needham. If it stalls, re-read Needham's corresponding chapter for geometric intuition, then return to S&S for the analytic proof.", alt: null, altWhy: null, reentry: "Pair each S&S Vol. 2 chapter with the corresponding Needham chapter." } },
             { id: "m_r12", type: "VOLUME 3", title: "Real Analysis: Measure Theory, Integration, Hilbert Spaces", author: "Stein & Shakarchi (Princeton Lectures Vol. 3)", why: "Lebesgue integration and Hilbert spaces in one volume. Replaces both Bartle and Kreyszig if you prefer a single source.",
               insecure: { advice: "Keep asking: what problem does Lebesgue integration solve? Answer: Riemann-non-integrable functions that appear as limits of nice functions. The dominated convergence theorem is the payoff.", alt: "The Elements of Integration and Lebesgue Measure — Bartle", altWhy: "Shortest rigorous Lebesgue introduction available. More accessible than S&S Vol. 3.", reentry: "Read Bartle Ch. 1–3 before attempting S&S Vol. 3 Ch. 1." } },
-            { id: "m_r13", type: "VOLUME 4*", title: "Functional Analysis", author: "Stein & Shakarchi (Princeton Lectures Vol. 4)", why: "Distributions, Sobolev spaces, spectral theory. Graduate-level. Optional unless heading toward rigorous QFT.",
+            { id: "m_r13", type: "DEFER TO POST-PHYSICS", title: "Functional Analysis", author: "Stein & Shakarchi (Princeton Lectures Vol. 4)", why: "Distributions, Sobolev spaces, spectral theory. Graduate-level. Optional unless heading toward rigorous QFT.",
               insecure: { advice: "Vol. 4 is genuinely graduate-level. Spend at least 6 months with the first three volumes before attempting it.", alt: null, altWhy: null, reentry: "Complete S&S Vol. 1–3 before Vol. 4." } }
           ],
           spotlights: [{ type: "INTEGRATED VS. MODULAR PATH", items: ["MODULAR (default): Abbott → Rudin → Bartle → Kreyszig. Best if you prefer each topic's best book independently.", "INTEGRATED (Stein-Shakarchi): Volumes 1–3. Best if you prefer one coherent narrative with Fourier analysis as the spine.", "COMPROMISE: Use S&S Vol. 1 (Fourier) alongside Abbott — adds exactly what Abbott underemphasizes for physics."] }]
@@ -452,7 +452,7 @@ const MATH = {
       id: "m3", number: "T3", title: "Linear Algebra — Rigorously Revisited",
       duration: "4–6 months", tag: "Core", color: "#3D3B8E", light: "#EEEDF8",
       intro: "Axler again, this time proving the spectral theorem yourself before reading his proof. Then Kreyszig's functional analysis — the infinite-dimensional extension that is the mathematical home of quantum mechanics.",
-      concurrent: ["p4"], concurrentNote: "Run concurrently with Physics Phase 4 (QM). Proving the spectral theorem here gives the mathematical foundation for why QM observables are Hermitian operators. Kreyszig's Hilbert space chapter is the mathematical content of Shankar Ch. 1.",
+      concurrent: ["p4"], concurrentNote: "CONCURRENT MINIMUM with P4: Axler re-read (prove spectral theorem) + Kreyszig Ch. 1–4 (normed, Banach, and Hilbert spaces). These are the direct mathematical foundation for QM observables. OPTIONAL / POST-PHYSICS: Halmos is more elegant on dual spaces and tensor products but adds little over Axler at this stage. S&S Vol. 3 (Lebesgue), if deferred from T2, belongs here as the concrete model for Kreyszig’s L² spaces.",
       sections: [
         {
           id: "m3_s1", title: "T3.1  Abstract Vector Spaces — Proving the Theorems",
@@ -460,7 +460,7 @@ const MATH = {
           resources: [
             { id: "m_r16", type: "PRIMARY", title: "Linear Algebra Done Right — proof-focused re-read", author: "Axler (4th ed.)", why: "This time: prove every theorem in Ch. 1–7 yourself before reading Axler's proof.",
               insecure: { advice: "If the spectral theorem proof (Ch. 7) is unclear, break it into three lemmas: (1) normal operators have eigenvectors, (2) eigenvectors for distinct eigenvalues are orthogonal, (3) the space has an orthonormal basis of eigenvectors. Prove each separately.", alt: "Finite-Dimensional Vector Spaces — Halmos", altWhy: "More elegant dual space and tensor product sections.", reentry: "Attempt each theorem from Ch. 1–6 before reading Ch. 7." } },
-            { id: "m_r17", type: "DEPTH*", title: "Finite-Dimensional Vector Spaces", author: "Halmos", why: "More elegant in places; dual space and tensor product sections are superior to most competitors.",
+            { id: "m_r17", type: "OPTIONAL — POST-PHYSICS", title: "Finite-Dimensional Vector Spaces", author: "Halmos", why: "More elegant in places; dual space and tensor product sections are superior to most competitors.",
               insecure: { advice: "Halmos is dense but never padded. If a proof is unclear, it is because a prior definition was not fully absorbed. Go back to the last definition before the proof.", alt: null, altWhy: null, reentry: "Read Halmos after completing Axler through Ch. 7." } }
           ],
           spotlights: [{ type: "SELF-PROVE BEFORE READING", items: ["Every spanning set contains a basis; every linearly independent set extends to a basis", "All bases have the same cardinality (well-definedness of dimension)", "rank(T) + nullity(T) = dim(V) — rank-nullity theorem", "Every operator on a complex finite-dimensional space has an eigenvalue", "Spectral theorem: normal operators are unitarily diagonalizable"] }]
@@ -480,7 +480,7 @@ const MATH = {
       id: "m4", number: "T4", title: "Multivariable Analysis & Topology",
       duration: "4–6 months", tag: "Advanced", color: "#7A5C00", light: "#FFF8E7",
       intro: "Spivak's Calculus on Manifolds proves the generalized Stokes' theorem — which subsumes the divergence theorem and Green's theorem from E&M — in full generality. Topology provides the language for condensed matter's topological phases.",
-      concurrent: ["p5", "p6"], concurrentNote: "Run alongside Physics Phases 5–6. Stokes' theorem here gives the mathematical foundation for Maxwell's equations in differential form. Topology provides the language for Berry phase and topological insulators in Phase 6.",
+      concurrent: ["p5", "p6"], concurrentNote: "CONCURRENT MINIMUM with P5–6: Spivak Calculus on Manifolds (differential forms and generalized Stokes’ theorem — required for Maxwell in differential form and Berry phase) + Munkres Part I Ch. 1–4 (topological spaces, connectedness, compactness). CONCURRENT WITH P6 (secondary): Hatcher Ch. 1 (fundamental groups and homotopy — needed for vortex winding numbers). Hatcher Ch. 2–3 (homology, cohomology) can be deferred to post-physics or read selectively.",
       sections: [
         {
           id: "m4_s1", title: "T4.1  Calculus on Manifolds — Spivak",
@@ -508,7 +508,7 @@ const MATH = {
       id: "m5", number: "T5", title: "Abstract Algebra for Physicists",
       duration: "3–5 months", tag: "Advanced", color: "#2C3E50", light: "#E8ECF0",
       intro: "The language of symmetry in physics. Conservation laws, particle classification, crystal structure, and quantum error correction all speak this language. This tier covers only the subset relevant to physics.",
-      concurrent: ["p6", "p8"], concurrentNote: "Run alongside Physics Phases 6–8. Representation theory here directly supports crystal symmetry groups (Phase 6), particle quantum numbers (Phase 8), and the stabilizer formalism of quantum error correction (Phase 8).",
+      concurrent: ["p6", "p8"], concurrentNote: "CONCURRENT MINIMUM with P6–8: Artin Ch. 1–7 (groups, rings, field extensions, matrix groups) + Serre (character theory and representations — directly needed for crystal symmetry and quantum numbers). DEFER TO POST-PHYSICS: Dummit & Foote and Lang are reference texts — encyclopedic coverage not needed during the physics program. Use D&F as a lookup reference during T5 rather than reading linearly. See Post-Physics Mathematics appendix.",
       sections: [
         {
           id: "m5_s1", title: "T5.1  Groups and Their Representations",
@@ -601,9 +601,21 @@ function getConcurrentNote(phase) {
   return null;
 }
 
+function normalizeSearch(str) {
+  // Lowercase + strip diacritics so Roman alphabet matches accented/special chars
+  // e.g. "Schrodinger" matches "Schrödinger", "Poincare" matches "Poincaré"
+  if (!str) return "";
+  return str.toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")  // strip combining diacritical marks
+    .replace(/[^a-z0-9\s]/g, " ")       // collapse remaining special chars to space
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function searchCurriculum(query) {
   if (!query || query.trim().length < 2) return [];
-  const q = query.toLowerCase();
+  const q = normalizeSearch(query);
   const results = [];
 
   for (const phase of getAllPhases()) {
@@ -618,13 +630,15 @@ function searchCurriculum(query) {
           resource.insecure && resource.insecure.advice,
           resource.insecure && resource.insecure.alt,
           resource.insecure && resource.insecure.altWhy,
-        ].filter(Boolean).join(" ").toLowerCase();
+        ].filter(Boolean).join(" ");
+        const rawFields = [resource.title, resource.author, resource.why, resource.type, resource.insecure && resource.insecure.advice, resource.insecure && resource.insecure.alt, resource.insecure && resource.insecure.altWhy].filter(Boolean).join(" ");
+        const fields = normalizeSearch(rawFields);
 
         if (fields.includes(q)) {
           let snippet = resource.why;
-          if (resource.title.toLowerCase().includes(q)) snippet = resource.why;
-          else if ((resource.author || "").toLowerCase().includes(q)) snippet = resource.author;
-          else if (resource.insecure && resource.insecure.alt && resource.insecure.alt.toLowerCase().includes(q)) snippet = "Alt: " + resource.insecure.alt;
+          if (normalizeSearch(resource.title).includes(q)) snippet = resource.why;
+          else if (normalizeSearch(resource.author || "").includes(q)) snippet = resource.author;
+          else if (resource.insecure && resource.insecure.alt && normalizeSearch(resource.insecure.alt).includes(q)) snippet = "Alt: " + resource.insecure.alt;
 
           results.push({
             id: `${phase.id}_${resource.id}`,
@@ -645,7 +659,7 @@ function searchCurriculum(query) {
       // Search spotlights
       for (const spotlight of section.spotlights) {
         for (const item of spotlight.items) {
-          if (item.toLowerCase().includes(q)) {
+          if (normalizeSearch(item).includes(q)) {
             results.push({
               id: `${phase.id}_spot_${item.slice(0, 20)}`,
               phaseId: phase.id,
@@ -700,7 +714,7 @@ function spotlightColor(type) {
 
 function highlightMatch(text, query) {
   if (!query || !text) return text;
-  var idx = text.toLowerCase().indexOf(query.toLowerCase());
+  var idx = normalizeSearch(text).indexOf(normalizeSearch(query));
   if (idx === -1) return text;
   return (
     <>
@@ -1728,7 +1742,17 @@ const APPENDIX_SECTIONS = [
       { title: "nLab", author: "ncatlab.org", type: "REFERENCE", note: "Category-theoretic perspective on mathematics and physics. Overkill for most of this curriculum but invaluable for understanding the algebraic structures behind quantum mechanics, topological phases, and TQFT." },
       { title: "Scholarpedia \u2014 Physics & Mathematics Articles", author: "scholarpedia.org", type: "REFERENCE", note: "Peer-reviewed encyclopedia articles written by original researchers. Exceptional for topics like dynamical systems, renormalization group, and quantum chaos where textbook treatments are incomplete." },
       { title: "arXiv.org \u2014 cond-mat, quant-ph, math-ph", author: "arxiv.org", type: "PREPRINTS", note: "Primary literature. For self-study, pedagogical review articles (especially Annual Reviews of Condensed Matter Physics) are accessible without full research context. Search for \u2018review\u2019 or \u2018lecture notes\u2019 in relevant subfields." },
-      { title: "Condensed Matter Theory From a Quantum Information Perspective", author: "Nayak et al. \u2014 various lecture notes", type: "LECTURE NOTES", note: "Several excellent sets of free lecture notes bridging condensed matter and quantum information (Nayak\u2019s topological quantum computing notes; McGreevy\u2019s topological phases notes at UCSD). Google Scholar search for \u2018lecture notes topological phases\u2019 finds current versions." },
+      { title: "Condensed Matter Theory From a Quantum Information Perspective", author: "Nayak et al. \u2014 various lecture notes", type: "LECTURE NOTES", note: "Several excellent sets of free lecture notes bridging condensed matter and quantum information (Nayak\u2019s topological quantum computing notes; McGreevy\u2019s topological phases notes at UCSD). Google Scholar search for 'lecture notes topological phases' finds current versions." },
+      { title: "Lectures on the Geometric Anatomy of Theoretical Physics", author: "Frederic Schuller (YouTube)", type: "YOUTUBE \u2605\u2605\u2605", note: "28 lectures covering the mathematical structure underlying physics: topological spaces, manifolds, vector bundles, connections, parallel transport, curvature, Lie groups, and principal fiber bundles. Schuller proves every theorem from first principles with exceptional clarity. Essential preparation for the topological material in Phase 6. Search 'Schuller Geometric Anatomy' on YouTube." },
+      { title: "International Winter School on Gravity and Light (WE-Heraeus Foundation)", author: "Frederic Schuller (YouTube)", type: "YOUTUBE \u2605\u2605\u2605", note: "20 lectures on differential geometry and general relativity with the same axiomatic rigor as the Geometric Anatomy series. Covers smooth manifolds, tensor fields, connections, curvature, and the Einstein equations. Ideal companion to Carroll or Wald. Search 'International Winter School Gravity Light Schuller' on YouTube." },
+      { title: "Fundamentals of Physics I & II", author: "Ramamurti Shankar, Yale Open Courses (YouTube)", type: "YOUTUBE \u2605\u2605", note: "Two full-semester courses taught by the author of the primary QM text. Physics I covers mechanics and special relativity (Phases 0-1); Physics II covers electromagnetism and quantum mechanics (Phases 2, 4). Shankar's explanations are exceptionally deliberate and clear. Search 'Shankar Yale Physics' on YouTube." },
+      { title: "ICTP Postgraduate Diploma Lecture Series", author: "International Centre for Theoretical Sciences, Trieste (YouTube)", type: "YOUTUBE \u2605\u2605", note: "Full lecture courses on condensed matter physics, quantum mechanics, mathematical physics, and statistical mechanics given to international graduate students. The condensed matter and QFT series are directly curriculum-relevant. Search 'ICTP condensed matter' on YouTube." },
+      { title: "Graduate Lecture Courses in Mathematics and Physics", author: "Oxford Mathematics (YouTube)", type: "YOUTUBE \u2605\u2605", note: "Full graduate courses freely available: Algebraic Topology (relevant to T4-T5), Manifolds, Quantum Field Theory, Number Theory, and more. Reflects Oxford's distinctive balance of rigor and geometric intuition. Search 'Oxford Mathematics' on YouTube." },
+      { title: "MPIPKS Summer Schools and Workshops", author: "Max Planck Institute for the Physics of Complex Systems (YouTube / mpipks-dresden.mpg.de)", type: "YOUTUBE", note: "Annual summer schools with recorded lectures on topological phases, quantum chaos, many-body localization, and non-equilibrium physics. Particularly valuable for Phase 6 topological material. Search 'MPIPKS topological' or 'MPIPKS summer school' on YouTube." },
+      { title: "MIT 8.04 Quantum Physics I (2016)", author: "Barton Zwiebach, MIT OpenCourseWare (YouTube)", type: "YOUTUBE \u2605\u2605", note: "The full 2016 lecture series on YouTube is among the best quantum mechanics courses available. Systematic, careful, and complete: wave-particle duality, Schrodinger equation, uncertainty principle, harmonic oscillator, hydrogen atom. Directly supports Phase 4. Full problem sets and exams at ocw.mit.edu/8.04." },
+      { title: "UTokyo OCW Physics Lectures", author: "University of Tokyo Open Course Ware (YouTube / ocw.u-tokyo.ac.jp)", type: "YOUTUBE", note: "The University of Tokyo makes statistical mechanics, condensed matter, and mathematical physics lecture series available in English. Search 'UTokyo statistical mechanics' on YouTube or browse the OCW catalogue. Useful complement to Phase 5-6." },
+      { title: "David Tong's Free Lecture Notes", author: "David Tong, University of Cambridge (damtp.cam.ac.uk/user/tong/teaching.html)", type: "FREE NOTES \u2605\u2605\u2605", note: "Tong's freely downloadable note sets are among the finest available anywhere: Quantum Field Theory, Statistical Field Theory, Lectures on the Quantum Hall Effect, Kinetic Theory, Electrodynamics, String Theory, and more. The Statistical Field Theory notes are the best bridge from Phase 5 to condensed matter QFT. The Quantum Hall notes are essential for Phase 6 topological material. Strongly recommended." },
+      { title: "Stanford Quantum Entanglement & Additional Courses", author: "Leonard Susskind, Stanford (YouTube)", type: "YOUTUBE", note: "Beyond the Theoretical Minimum series already listed, Stanford's YouTube channel hosts courses on quantum entanglement, statistical mechanics, and special relativity with greater depth than the companion books. The quantum entanglement lectures bridge Phase 4 to Phase 8. Search 'Stanford Susskind' on YouTube." },
     ]
   },
 
@@ -1770,11 +1794,11 @@ const APPENDIX_SECTIONS = [
     id: "app_abstract_alg", title: "Abstract Algebra",
     phaseRef: "T5", color: "#2C3E50",
     entries: [
-      { title: "Abstract Algebra", author: "Dummit & Foote (3rd ed.)", type: "GRADUATE STANDARD", note: "Tomforde recommended. The comprehensive graduate standard. Groups, rings, fields, modules, Galois theory, representation theory. The reference to have. Dense but thorough." },
+      { title: "Abstract Algebra", author: "Dummit & Foote (3rd ed.)", type: "POST-PHYSICS REFERENCE", note: "Tomforde recommended. The comprehensive graduate standard. Groups, rings, fields, modules, Galois theory, representation theory. The reference to have. Dense but thorough." },
       { title: "Algebra", author: "Artin (2nd ed.)", type: "GEOMETRIC", note: "Tomforde recommended. Geometric approach with linear algebra and groups developed together. Strong on matrix groups and representations, making it particularly good for physics applications." },
       { title: "Topics in Algebra", author: "Herstein", type: "CLASSIC", note: "Tomforde recommended. Rigorous and elegant. Problems are famously hard. Classic alternative to Dummit & Foote for students who want a more economical treatment." },
       { title: "Group Theory in a Nutshell for Physicists", author: "Zee", type: "PHYSICS-FACING", note: "Rigetti recommended. Lie groups and representation theory for physicists. Best bridge between abstract algebra and the physics applications in QM and condensed matter." },
-      { title: "Algebra", author: "Lang", type: "ENCYCLOPEDIC", note: "Tomforde recommended. The reference for graduate algebra. Too terse for linear study but authoritative on every topic. Use after Dummit & Foote for deeper dives." },
+      { title: "Algebra", author: "Lang", type: "POST-PHYSICS REFERENCE", note: "Tomforde recommended. The reference for graduate algebra. Too terse for linear study but authoritative on every topic. Use after Dummit & Foote for deeper dives." },
     ]
   },
   {
@@ -1870,6 +1894,34 @@ const APPENDIX_SECTIONS = [
       { title: "The Art of Problem Solving (Vol. 1 & 2)", author: "Lehoczky & Rusczyk", type: "FOUNDATIONS", note: "Best proof-writing and mathematical reasoning foundations at the pre-college to early undergraduate level. Exceptional for rebuilding discrete math intuition before T0 if proof mechanics feel weak." },
       { title: "Introduction to the Theory of Computation", author: "Sipser (3rd ed.)", type: "COMPUTABILITY", note: "Automata, context-free languages, Turing machines, decidability, complexity (P vs NP, BQP). The standard text and the best preparation for understanding quantum computational complexity and the power of quantum algorithms." },
       { title: "Discrete Mathematics and Its Applications", author: "Rosen (8th ed.)", type: "COMPREHENSIVE", note: "The standard undergraduate discrete math reference. Logic, proofs, sets, functions, algorithms, number theory, combinatorics, graph theory, boolean algebra. Best single-volume reference for the full discrete math landscape." },
+    ]
+  },
+  {
+    id: "app_cmft", title: "Condensed Matter Field Theory (P5\u2013P6 Bridge)",
+    phaseRef: "P5 / P6", color: "#1A4A6B",
+    entries: [
+      { title: "Why field theory for condensed matter?", author: "Overview", type: "ORIENTATION", note: "You do not need to read Peskin & Schroeder to do condensed matter physics. The relevant QFT ideas are: (1) path integrals and partition functions as the same object, (2) spontaneous symmetry breaking and Goldstone bosons (phonons, magnons, Cooper pairs), (3) effective field theories and the renormalization group (already in Phase 5), (4) second quantization in the field-theoretic language, and (5) topological field theories (Chern-Simons theory for quantum Hall, \u03b8-terms for topological insulators). This section identifies what to read and in what order." },
+      { title: "Condensed Matter Field Theory", author: "Altland & Simons (2nd ed.)", type: "PRIMARY \u2605\u2605\u2605", note: "The essential bridge between graduate statistical mechanics/QM and condensed matter physics. Ch. 1\u20132 (second quantization and functional field integral) should be read at the end of Phase 5 or start of Phase 6. Ch. 3\u20134 (perturbation theory and RG) complement Phase 5's renormalization group discussion. Ch. 7 (response functions) and Ch. 9 (topology) are core Phase 6 reading. More accessible than Fradkin as an entry point." },
+      { title: "Quantum Field Theory of Many-Body Systems", author: "Xiao-Gang Wen", type: "TOPOLOGICAL ORDER \u2605\u2605\u2605", note: "Wen's book is unlike any other: it develops string-net condensation, topological order, non-Abelian anyons, and edge states from first principles. Chapters 1\u20133 give an efficient review of path integrals and second quantization. The remainder is the primary source for the modern theory of topological phases and fractionalization. Read alongside Phase 6 topological insulator material." },
+      { title: "Field Theories of Condensed Matter Physics", author: "Eduardo Fradkin (2nd ed.)", type: "ADVANCED", note: "More encyclopedic than Altland & Simons. Strong on lattice gauge theories, the Hubbard model, bosonization, and fractionalization. The chapters on quantum Hall effect and topological phases are thorough. Best used as a reference alongside Altland & Simons rather than as primary reading." },
+      { title: "Statistical Field Theory (lecture notes)", author: "David Tong (free, damtp.cam.ac.uk)", type: "FREE NOTES \u2605\u2605\u2605", note: "Tong's ~100-page note set on statistical field theory is the best short introduction to the field-theoretic treatment of phase transitions, spontaneous symmetry breaking, Goldstone bosons, the Ising model RG, and the Kosterlitz-Thouless transition. Read after completing Phase 5's renormalization group section. Free PDF at Tong's Cambridge page." },
+      { title: "Lectures on the Quantum Hall Effect (lecture notes)", author: "David Tong (free, damtp.cam.ac.uk)", type: "FREE NOTES \u2605\u2605\u2605", note: "Tong's QHE notes are the best accessible introduction to Landau levels, integer and fractional quantum Hall physics, Chern-Simons theory, and the connection to topological insulators. Essential Phase 6 reading. Read after first encountering Berry phase in Phase 6." },
+      { title: "What to read from standard QFT texts for condensed matter", author: "Selective reading guide", type: "READING GUIDE", note: "From Zee (QFT in a Nutshell): Part I Ch. 1\u20134 (path integrals, Feynman diagrams, spontaneous symmetry breaking), Part V Ch. V.1\u2013V.3 (superfluids, superconductors, quantum Hall). From Peskin & Schroeder: Ch. 9 (path integrals), Ch. 11 (spontaneous symmetry breaking and Goldstone theorem). These targeted readings take 4\u20136 weeks and give the full field-theoretic vocabulary needed for Altland & Simons without requiring a full QFT course." },
+      { title: "Quantum Field Theory in Condensed Matter Physics", author: "Naoto Nagaosa", type: "SUPPLEMENT", note: "Compact book covering path integrals, linear response, gauge fields, and topological terms specifically for condensed matter contexts. More accessible than Fradkin at the cost of less depth. Good for a targeted overview before Altland & Simons." },
+      { title: "Particle physics concepts relevant to condensed matter", author: "Reference note", type: "CONCEPT NOTE", note: "The following particle physics concepts appear directly in condensed matter: (1) Spontaneous symmetry breaking and the Higgs mechanism \u2014 the Meissner effect in superconductors is the Higgs mechanism in a U(1) gauge theory. (2) Goldstone theorem \u2014 every broken continuous symmetry gives a massless boson: phonons (broken translation), magnons (broken rotation), Cooper pairs (broken U(1)). (3) Anomalies \u2014 chiral anomaly explains surface states of topological insulators. (4) Chern-Simons theory \u2014 the effective field theory of the quantum Hall effect. (5) theta-terms and axion electrodynamics \u2014 the electromagnetic response of topological insulators." },
+    ]
+  },
+  {
+    id: "app_post_math", title: "Post-Physics: Pure Mathematics Extensions",
+    phaseRef: "After P8", color: "#4A1942",
+    entries: [
+      { title: "Overview: what belongs here and why", author: "Program note", type: "ORIENTATION", note: "The following mathematical topics are genuinely worth pursuing but are not on the critical path for any physics phase. Moving them post-physics serves two purposes: (1) you have more mathematical maturity and better physical intuition when you encounter them, making them more illuminating rather than just more work; (2) the physics program is not delayed waiting for pure-math prerequisites that only loosely connect to physics. The topics here are recommended in roughly the order listed." },
+      { title: "Advanced Number Theory", author: "Post-physics track", type: "TRACK", note: "Prerequisites met during T0: Hardy & Wright Ch. 1\u20132 gave divisibility and primes. Post-physics sequence: (1) Hardy & Wright Ch. 5\u201310 (congruences, quadratic residues, sums of squares, continued fractions) \u2014 the richest elementary number theory; (2) Apostol's Introduction to Analytic Number Theory for Dirichlet series, the prime number theorem, and L-functions; (3) Neukirch Algebraic Number Theory for the algebraic side (ideal class groups, Dedekind domains). Connections to physics: L-functions appear in zeta function regularization in QFT; modular forms appear in string theory." },
+      { title: "Measure-Theoretic Probability", author: "Post-physics track", type: "TRACK", note: "The physics program uses probability extensively (Phase 0.3 Jaynes, Phase 5 stat mech) but only requires Jaynes-style and elementary measure theory from Lebesgue integration (T2). Post-physics depth sequence: (1) Billingsley Probability and Measure \u2014 the standard rigorous text; (2) Durrett Probability: Theory and Examples \u2014 more accessible, strong on applications; (3) Revuz & Yor Continuous Martingales and Brownian Motion for stochastic calculus. Connections to physics: quantum stochastic differential equations, noise in quantum devices (Phase 8), stochastic thermodynamics." },
+      { title: "Arnold: Full Symplectic Geometry Program", author: "Post-physics track", type: "TRACK", note: "Concurrent portion already identified: Arnold Ch. 1 and Ch. 3 (Lagrangian and Hamiltonian mechanics) read after T4 alongside Phase 5\u20136. Post-physics portion: Ch. 4 (variational principles), Ch. 7 (integrable systems), Ch. 8 (perturbation theory), Ch. 9 (adiabatic invariants), and the appendices on symplectic topology. Prerequisites: completed T4 (Spivak CoM + topology) and familiarity with Lee's Smooth Manifolds. Pair with Arnol'd & Avez Ergodic Problems of Classical Mechanics for the ergodic theory side." },
+      { title: "Algebraic Number Theory and Arithmetic Geometry", author: "Post-physics track", type: "TRACK", note: "For those who want to go deep into the algebraic structures underlying modular forms and elliptic curves, which appear in areas of mathematical physics: (1) Serre A Course in Arithmetic \u2014 beautifully written, connects quadratic forms, p-adic numbers, and modular forms; (2) Silverman The Arithmetic of Elliptic Curves \u2014 the standard graduate text; (3) Diamond & Shurman A First Course in Modular Forms. These are pure mathematics but have connections to string compactifications and conformal field theory." },
+      { title: "Ergodic Theory and Dynamical Systems", author: "Post-physics track", type: "TRACK", note: "A natural extension of Phase 5 (statistical mechanics) and Arnold's symplectic mechanics. (1) Walters An Introduction to Ergodic Theory \u2014 standard text; (2) Katok & Hasselblatt Introduction to the Modern Theory of Dynamical Systems \u2014 encyclopedic; (3) Devaney An Introduction to Chaotic Dynamical Systems for the elementary side. Directly relevant to thermalization, quantum chaos, and many-body ergodicity questions." },
+      { title: "Category Theory", author: "Post-physics track", type: "TRACK", note: "Category theory provides a unifying language for many structures in this curriculum. Not on the critical path but intellectually illuminating. (1) Lawvere & Schanuel Conceptual Mathematics \u2014 the gentlest introduction; (2) Riehl Category Theory in Context \u2014 free PDF, excellent graduate introduction; (3) Mac Lane Categories for the Working Mathematician \u2014 the classic. nLab (already in online resources) is the category-theoretic perspective on physics and mathematics." },
     ]
   },
 ];
