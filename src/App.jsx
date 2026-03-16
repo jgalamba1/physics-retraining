@@ -266,6 +266,55 @@ const PHYSICS = {
       ]
     },
     {
+      id: "p5_5", number: "5.5", title: "Condensed Matter Field Theory — Minimum",
+      duration: "2–3 months", tag: "Bridge", color: "#1A4A6B", light: "#E8F0F7",
+      intro: "A targeted field-theory minimum before Phase 6. You do not need a full QFT course — you need the field-theoretic language that condensed matter actually uses: path integrals as partition functions, spontaneous symmetry breaking and Goldstone bosons, the field-theoretic RG, and second quantization in field-language. These ideas reappear on every page of Altland & Simons and Wen. Spending 2–3 months here makes Phase 6 significantly more transparent.",
+      concurrent: ["m4"], concurrentNote: "CONCURRENT MINIMUM: Munkres topology (T4) should be underway or complete — fiber bundle and homotopy language appears in the topological field theory sections. Altland & Simons Ch. 1 assumes second quantization from Phase 4 (QM) and the partition function from Phase 5.",
+      sections: [
+        {
+          id: "p5_5_s1", title: "5.5.1  Path Integrals as Partition Functions",
+          desc: "The central unifying idea: the quantum partition function Z = Tr e^{−βH} and the path integral are the same object under Wick rotation. This is the conceptual bridge from Phase 5 statistical mechanics to the field-theoretic methods of Phase 6.",
+          resources: [
+            { id: "r_cmft1", type: "PRIMARY ★★★", title: "Condensed Matter Field Theory", author: "Altland & Simons (2nd ed.), Ch. 1–2", why: "Ch. 1 (second quantization in field language) and Ch. 2 (functional field integral and the coherent state path integral) are the required reading. These two chapters give the full bridge from QM/stat mech to the field-theoretic toolkit of Phase 6. Budget 4–6 weeks.",
+              insecure: { advice: "If the coherent state path integral (Ch. 2) is unclear, the key step is the resolution of the identity ∫ dφ* dφ e^{−|φ|²} |φ⟩⟨φ| = 1. Work through this insertion for a single harmonic oscillator before the many-body case. The path integral then follows from inserting this identity N times in the trace.", alt: "Quantum Field Theory in a Nutshell — Zee, Part I Ch. 1–3", altWhy: "Zee’s path integral introduction (Part I, Ch. 1–3) is more gentle and intuition-first. Read before Altland & Simons if the coherent state construction feels unmotivated.", reentry: "Read Zee Part I Ch. 1–2 before returning to Altland & Simons Ch. 2." } },
+            { id: "r_cmft2", type: "ENTRY POINT", title: "Quantum Field Theory in a Nutshell", author: "Zee (2nd ed.), Part I Ch. 1–4 + Part V Ch. V.1–V.3", why: "Targeted reading only: Part I Ch. 1–4 (path integrals, Feynman diagrams, spontaneous symmetry breaking) gives the conceptual scaffolding. Part V Ch. V.1–V.3 (superfluids, superconductors, quantum Hall) is directly Phase 6 relevant. Skip everything else for now.",
+              insecure: { advice: "Zee is deliberately conversational — if any chapter feels hand-wavy, that’s intentional. The goal is intuition, not rigor. Follow up with Altland & Simons for the precise version of each idea.", alt: null, altWhy: null, reentry: "Read Zee Part I Ch. 1 before Altland & Simons Ch. 2." } },
+            { id: "r_cmft3", type: "FREE NOTES ★★★", title: "Statistical Field Theory (lecture notes)", author: "David Tong (free, damtp.cam.ac.uk)", why: "~100 pages covering the field-theoretic treatment of phase transitions, spontaneous symmetry breaking, Goldstone bosons, the Ising model RG, and Kosterlitz-Thouless transition. The best short bridge from Phase 5’s renormalization group to the field-theoretic language. Read before or alongside Altland & Simons Ch. 3–4.",
+              insecure: { advice: "If the Wilsonian RG in Tong feels disconnected from Pathria’s RG treatment, they are the same idea in different languages: Pathria tracks how thermodynamic quantities transform under scale changes; Tong tracks how the action (= −log partition function) transforms. The fixed point is the same object.", alt: null, altWhy: null, reentry: "Re-read Pathria Ch. 13 (critical phenomena and RG) before Tong’s RG section." } }
+          ],
+          spotlights: [{ type: "THE CENTRAL IDENTITY", items: [
+            "Z = Tr e^{−βH} = ∫ Dφ e^{−S_E[φ]} where S_E is the Euclidean action: stat mech and QFT are the same integral",
+            "Wick rotation t → −iτ converts real-time QFT to finite-temperature stat mech: β = 1/kT plays the role of imaginary time extent",
+            "Mean-field theory = saddle-point approximation to the path integral: fluctuations beyond mean field are loop corrections"
+          ]}]
+        },
+        {
+          id: "p5_5_s2", title: "5.5.2  Spontaneous Symmetry Breaking & Goldstone Bosons",
+          desc: "Every broken continuous symmetry produces a massless mode. This single theorem explains phonons, magnons, and Cooper pairs, and underlies the Higgs mechanism in superconductors.",
+          resources: [
+            { id: "r_cmft4", type: "PRIMARY", title: "Condensed Matter Field Theory", author: "Altland & Simons Ch. 3–4 (perturbation theory and RG)", why: "Ch. 3 develops the diagrammatic perturbation theory for the field integral; Ch. 4 applies the RG to the φ⁴ theory and derives universality. Directly extends Phase 5’s RG discussion into field-theoretic language.",
+              insecure: { advice: "Feynman diagrams in Ch. 3 are bookkeeping for Gaussian integrals — each diagram is a term in the Wick expansion of ⟨φφ...⟩. If lost, return to the single-variable version: expand e^{−λx⁴/4!} and compute ⟨x²⟩ perturbatively, drawing each term as a diagram.", alt: null, altWhy: null, reentry: "Read Altland & Simons Ch. 2 fully before Ch. 3." } },
+            { id: "r_cmft5", type: "CONCEPT NOTE", title: "Particle physics concepts that appear directly in condensed matter", author: "Reference", why: "Five ideas from particle physics are not optional in Phase 6: (1) Goldstone theorem — broken continuous symmetry → massless boson: phonons (translation), magnons (spin rotation), Nambu-Goldstone modes in superconductors. (2) Higgs mechanism — the Meissner effect IS the Higgs mechanism in a U(1) gauge theory: photon acquires mass inside a superconductor. (3) Chern-Simons theory — effective field theory of the quantum Hall effect. (4) Axion electrodynamics / θ-terms — electromagnetic response of topological insulators. (5) Anomalies — chiral anomaly explains protected surface states.",
+              insecure: { advice: "These five ideas are not presented in Kittel or Ashcroft & Mermin — they require Altland & Simons, Wen, or Tong’s lecture notes to encounter. Keep this list as a checklist: by the end of Phase 6, each item should feel familiar.", alt: null, altWhy: null, reentry: null } }
+          ],
+          spotlights: [{ type: "GOLDSTONE COUNTING RULE", items: [
+            "G broken to H → dim(G/H) massless Goldstone bosons",
+            "Heisenberg ferromagnet breaks SO(3) → SO(2): 2 Goldstone modes (magnons) but only 1 observed — exception from non-relativistic dispersion",
+            "U(1) broken in superconductor: 1 Goldstone mode — eaten by photon via Higgs mechanism (Meissner effect)"
+          ]}]
+        },
+        {
+          id: "p5_5_s3", title: "5.5.3  Second Quantization in Field Language",
+          desc: "Second quantization was introduced in Phase 4 (QM). Here it is recast in field-theoretic language — the creation/annihilation operators become fields, and the Hamiltonian becomes a functional. This is the language of Altland & Simons and Wen throughout Phase 6.",
+          resources: [
+            { id: "r_cmft6", type: "VISUAL INTRO", title: "A Guide to Feynman Diagrams in the Many-Body Problem", author: "Mattuck, Ch. 1–4", why: "Informal, visual, remarkably clear. Mattuck’s first four chapters give the physical picture of second quantization and diagrammatic methods before the formalism. Read before Altland & Simons Ch. 1 if that chapter feels too abstract.",
+              insecure: { advice: "Mattuck is deliberately informal and sometimes sloppy. Read Fetter & Walecka Ch. 1–2 in parallel if you want the rigorous version of the same material.", alt: "Fetter & Walecka — Quantum Theory of Many-Particle Systems, Ch. 1–2", altWhy: "Rigorous parallel treatment. More demanding but precise.", reentry: "Read Mattuck Ch. 1 before Altland & Simons Ch. 1." } }
+          ],
+          spotlights: []
+        }
+      ]
+    },
+    {
       id: "p6", number: "6", title: "Condensed Matter Physics",
       duration: "8–12 months", tag: "Destination", color: "#2C3E50", light: "#E8ECF0",
       intro: "Where everything converges. QM of many-body systems, statistical mechanics of interacting particles, and the geometry from Phase 2's optional layer all reappear here. The modern field is also where quantum computing hardware lives.",
@@ -1895,10 +1944,10 @@ const APPENDIX_SECTIONS = [
     ]
   },
   {
-    id: "app_cmft", title: "Condensed Matter Field Theory (P5\u2013P6 Bridge)",
-    phaseRef: "P5 / P6", color: "#1A4A6B",
+    id: "app_cmft", title: "Condensed Matter Field Theory (Deep Reference)",
+    phaseRef: "P5.5 / P6", color: "#1A4A6B",
     entries: [
-      { title: "Why field theory for condensed matter?", author: "Overview", type: "ORIENTATION", note: "You do not need to read Peskin & Schroeder to do condensed matter physics. The relevant QFT ideas are: (1) path integrals and partition functions as the same object, (2) spontaneous symmetry breaking and Goldstone bosons (phonons, magnons, Cooper pairs), (3) effective field theories and the renormalization group (already in Phase 5), (4) second quantization in the field-theoretic language, and (5) topological field theories (Chern-Simons theory for quantum Hall, \u03b8-terms for topological insulators). This section identifies what to read and in what order." },
+      { title: "About this section", author: "Reference note", type: "ORIENTATION", note: "The minimum field-theory content for Phase 6 is now in Phase 5.5 (Altland & Simons Ch. 1–4, Tong’s Statistical Field Theory notes, Zee Part I + Part V). This appendix contains the deeper references — Wen, Fradkin, Nagaosa, and the full Altland & Simons text — for readers going beyond the Phase 5.5 minimum. Not required for Phase 6 but relevant for topological order, fractionalization, and non-Abelian anyons." },
       { title: "Condensed Matter Field Theory", author: "Altland & Simons (2nd ed.)", type: "PRIMARY \u2605\u2605\u2605", note: "The essential bridge between graduate statistical mechanics/QM and condensed matter physics. Ch. 1\u20132 (second quantization and functional field integral) should be read at the end of Phase 5 or start of Phase 6. Ch. 3\u20134 (perturbation theory and RG) complement Phase 5's renormalization group discussion. Ch. 7 (response functions) and Ch. 9 (topology) are core Phase 6 reading. More accessible than Fradkin as an entry point." },
       { title: "Quantum Field Theory of Many-Body Systems", author: "Xiao-Gang Wen", type: "TOPOLOGICAL ORDER \u2605\u2605\u2605", note: "Wen's book is unlike any other: it develops string-net condensation, topological order, non-Abelian anyons, and edge states from first principles. Chapters 1\u20133 give an efficient review of path integrals and second quantization. The remainder is the primary source for the modern theory of topological phases and fractionalization. Read alongside Phase 6 topological insulator material." },
       { title: "Field Theories of Condensed Matter Physics", author: "Eduardo Fradkin (2nd ed.)", type: "ADVANCED", note: "More encyclopedic than Altland & Simons. Strong on lattice gauge theories, the Hubbard model, bosonization, and fractionalization. The chapters on quantum Hall effect and topological phases are thorough. Best used as a reference alongside Altland & Simons rather than as primary reading." },
